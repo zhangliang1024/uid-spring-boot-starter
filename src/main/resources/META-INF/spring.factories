@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.pzy.zhliang.uid.config.UidConfiguration
