@@ -1,12 +1,21 @@
 # uid-spring-boot-starter
 > 基于 美团leaf、百度UidGenerator、原生snowflake 进行整合的 唯一ID生成器 starter
+>
+> - 其中解决时间回拨问题的优化方案如下：
+>  1. 如果发现当前时间少于上次生成id的时间(时间回拨)，着计算回拨的时间差
+>  2. 如果时间差(offset)小于等于5ms，着等待 offset * 2 的时间再生成
+>  3. 如果offset大于5，则直接抛出异常
 
-### 一介绍：
+### 一、项目介绍：
+```markdown
+1. 百度UidGenerator
+2. 美团leaf
+3. 基于美团leaf segment优化版
+4. sonwflake优化版，解决时钟回拨问题
 
-### 二、说明
+```
 
-
-### 三、使用
+### 二、使用说明
 > 如果使用百度策略：DisposableWorkerIdAssigner，利用数据库来管理生成workId。
 ```sql
 DROP TABLE IF EXISTS WORKER_NODE;
