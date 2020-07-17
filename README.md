@@ -134,14 +134,16 @@ public class UidContextController {
 
 ### 三、参考文档
 
-★★
+> ★★
+
 [基于Spring Boot的可直接运行的分布式ID生成器的实现以及SnowFlake算法详解](https://www.cnblogs.com/csonezp/p/12088432.html)
 
 [使用雪花算法为分布式下全局ID、订单号等简单解决方案考虑到时钟回拨](https://blog.csdn.net/ycb1689/article/details/89331634)
 
 [关于分布式唯一ID，snowflake的一些思考及改进(完美解决时钟回拨问题)](https://blog.csdn.net/WGH100817/article/details/101719325)
 
-★★★
+> ★★★
+
 [雪花算法博客演绎](https://blog.csdn.net/u011857851/category_9215381.html)
 
 [雪花算法中机器id保证全局唯一](https://www.cnblogs.com/shanzhai/p/10500274.html)
