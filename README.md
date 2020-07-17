@@ -12,7 +12,8 @@
 2. 美团leaf
 3. 基于美团leaf segment优化版
 4. sonwflake优化版，解决时钟回拨问题
-
+   sonflake 支持通过配置文件的方式去制定：标识id 机器id 
+   也可根据机器所在服务器自动生产
 ```
 
 ### 二、使用说明
@@ -130,3 +131,23 @@ public class UidContextController {
         System.out.println("get Uid group test: " +context.getUID("test"));
     }
 ```
+
+### 三、参考文档
+
+★★
+[基于Spring Boot的可直接运行的分布式ID生成器的实现以及SnowFlake算法详解](https://www.cnblogs.com/csonezp/p/12088432.html)
+[使用雪花算法为分布式下全局ID、订单号等简单解决方案考虑到时钟回拨](https://blog.csdn.net/ycb1689/article/details/89331634)
+[关于分布式唯一ID，snowflake的一些思考及改进(完美解决时钟回拨问题)](https://blog.csdn.net/WGH100817/article/details/101719325)
+
+★★★
+[雪花算法博客演绎](https://blog.csdn.net/u011857851/category_9215381.html)
+[雪花算法中机器id保证全局唯一](https://www.cnblogs.com/shanzhai/p/10500274.html)
+
+
+### 四、个人实现
+★`spring-boot-uid-generator`基于[百度uid](https://github.com/baidu/uid-generator)，将代码修改为可以直接部署运行的`spring boot` 项目
+★[spring-boot-uid-generator](https://github.com/csonezp/spring-boot-uid-generator)
+★[分布式高效有序ID生成器](http://git.oschina.net/yu120/sequence)
+
+> 居于美团leaf、百度UidGenerator、原生snowflake 进行整合的 唯一ID生成器 
+[ecp-uid](https://github.com/linhuaichuan/ecp-uid)
